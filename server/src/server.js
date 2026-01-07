@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes');
+const { protect } = require('./middleware/authMiddleware');
 
 dotenv.config({ path: '../.env' }); // Reaches up to the root.env
 
